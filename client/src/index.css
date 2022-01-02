@@ -7,3 +7,15 @@ body {
   width: 100vw;
   overflow: hidden;
 }
+
+.pin {
+  transform: translate(-50%, -100%);
+}
+
+.pin.red path {
+  fill: #f05305;
+}
+
+.pin.yellow path {
+  fill: #F3B73E;
+}
