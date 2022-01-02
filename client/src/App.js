@@ -1,7 +1,8 @@
-function App() {
+import Map from './components/Map';
+
+const App = () => {
   return (
-    <div className="App">
-    </div>
+    <Map />
   );
 }
 
