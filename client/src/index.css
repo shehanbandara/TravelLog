@@ -19,3 +19,31 @@ body {
 .pin.yellow path {
   fill: #F3B73E;
 }
+
+.popup {
+  width: 30vw;
+  padding: 0.5rem;
+  background-color: #696969;
+}
+
+.popup h3 {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.popup p {
+  color: #FFFFFF;
+}
+
+.popup small {
+  color: #FFFFFF;
+}
+
+.popup img {
+  height: 200px;
+  padding: 1rem;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
