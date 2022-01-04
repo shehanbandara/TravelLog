@@ -25,7 +25,7 @@ const Pin = () => {
         <>
             {
                 logEntries.map(entry => (
-                    <>
+                    <React.Fragment key={entry._id}>
                         <Marker
                             key={entry._id}
                             latitude={entry.latitude}
@@ -35,7 +35,7 @@ const Pin = () => {
                                     [entry._id]: true
                                 })} >
                                 <svg
-                                    className="pin yellow"
+                                    className="pin blue"
                                     style={{
                                         height: `${6 * viewport.zoom}px`,
                                         width: `${6 * viewport.zoom}px`,
@@ -56,8 +56,8 @@ const Pin = () => {
                                 <Popup
                                     latitude={entry.latitude}
                                     longitude={entry.longitude}
-                                    closeButton={true}
-                                    closeOnClick={false}
+                                    closeButton={false}
+                                    closeOnClick={true}
                                     dynamicPosition={true}
                                     onClose={() => setShowPopup({})}
                                     anchor="top" >
@@ -70,7 +70,7 @@ const Pin = () => {
                                 </Popup>
                             ) : null
                         }
-                    </>
+                    </React.Fragment>
                 ))
             }
         </>
