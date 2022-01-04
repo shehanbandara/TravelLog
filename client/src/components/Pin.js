@@ -62,9 +62,9 @@ const Pin = () => {
                                     onClose={() => setShowPopup({})}
                                     anchor="top" >
                                     <div className="popup">
-                                        <h3>{entry.title}</h3>
-                                        <p>{entry.comments}</p>
-                                        <small>Visited On: {new Date(entry.visitDate).toLocaleDateString()}</small>
+                                        <h3>📍 {entry.title}</h3>
+                                        <p>💭 {entry.comments}</p>
+                                        <small>📅 Visited On: {new Date(entry.visitDate).toLocaleDateString()}</small>
                                         {entry.image && <img src={entry.image} alt={entry.title} />}
                                     </div>
                                 </Popup>

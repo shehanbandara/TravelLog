@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 
+import Form from './Form';
 import Pin from './Pin';
 
 const Map = () => {
@@ -62,7 +63,7 @@ const Map = () => {
                             onClose={() => setAddPinLocation(null)}
                             anchor="top" >
                             <div className="popup">
-                                <h3>Where Did You Visit?!</h3>
+                                <Form />
                             </div>
                         </Popup>
                     </>
