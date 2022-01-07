@@ -83,6 +83,7 @@ const Map = () => {
                                         <p>💭 {entry.comments}</p>
                                         <small>📅 Visited On: {new Date(entry.visitDate).toLocaleDateString()}</small>
                                         {entry.image && <img src={entry.image} alt={entry.title} />}
+                                        <button className='delete-button'>❌ Delete Travel Log Entry ❌</button>
                                     </div>
                                 </Popup>
                             ) : null
