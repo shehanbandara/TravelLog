@@ -15,3 +15,10 @@ export async function createLogEntry(entry) {
     });
     return response.json();
 }
+
+export async function deleteLogEntry(id) {
+    const response = await fetch(`${APIURL}/api/logs/delete/${id}`, {
+        method: 'DELETE'
+    });
+    return response.json();
+}

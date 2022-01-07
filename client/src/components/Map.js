@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 
 import Form from './Form';
-import { listLogEntries } from '../API';
+import { deleteLogEntry, listLogEntries } from '../API';
 
 const Map = () => {
     const [addPinLocation, setAddPinLocation] = useState(null);
@@ -32,6 +32,14 @@ const Map = () => {
     useEffect(() => {
         getEntries();
     }, []);
+
+    const deleteEntry = async (id) => {
+        try {
+            const deleted = await deleteLogEntry(id);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <ReactMapGL
@@ -83,7 +91,12 @@ const Map = () => {
                                         <p>💭 {entry.comments}</p>
                                         <small>📅 Visited On: {new Date(entry.visitDate).toLocaleDateString()}</small>
                                         {entry.image && <img src={entry.image} alt={entry.title} />}
-                                        <button className='delete-button'>❌ Delete Travel Log Entry ❌</button>
+                                        <button
+                                            className='delete-button'
+                                            onClick={() => {
+                                                deleteEntry(entry._id);
+                                                getEntries();
+                                            }}>❌ Delete Travel Log Entry ❌</button>
                                     </div>
                                 </Popup>
                             ) : null
