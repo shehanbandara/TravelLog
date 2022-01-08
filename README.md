@@ -1,5 +1,5 @@
 # TravelLog
-A full stack web application to log your travels around the world! 🌎<br />
+A full stack MERN web application to log your travels around the world! 🌎<br />
 User functionality includes the ability to create new log entries, view existing log entries, and delete existing log entries.<br />
 
 ## How It Works: ##
