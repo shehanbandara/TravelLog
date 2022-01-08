@@ -84,6 +84,7 @@ const Map = () => {
                                     closeButton={false}
                                     closeOnClick={true}
                                     dynamicPosition={true}
+                                    sortByDepth={true}
                                     onClose={() => setShowPopup({})}
                                     anchor="top" >
                                     <div className="popup">
